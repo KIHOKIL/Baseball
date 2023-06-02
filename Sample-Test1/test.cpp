@@ -12,9 +12,8 @@ TEST(BaseballGame, InvalidArgument) {
 }
 
 TEST(BaseballGame, PerfectMatch) {
-	string answer = "123";
-	Baseball baseball(answer);
-	Result result = baseball.guess(answer);
+	Baseball baseball("123");
+	Result result = baseball.guess("123");
 
 	EXPECT_EQ(true, result.solved);
 	EXPECT_EQ(3, result.strikes);
